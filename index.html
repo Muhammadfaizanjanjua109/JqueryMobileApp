@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <title>Panel Swipe</title>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+     
+<link rel="stylesheet" href="jquery.mobile-1.4.5\jquery.mobile-1.4.5.min.css">
+     
+<script src="jquery.mobile-1.4.5\jquery-1.11.3.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+<script src="jquery.mobile-1.4.5\jquery.mobile-1.4.5.min.js"></script>
+
+<link rel="shortcut icon" href="./source/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+      <script>
+         $( document ).on( "pagecreate", "#mypage", function() {
+            $( document ).on( "swipeleft swiperight", "#mypage", function( e ) {
+               if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
+                  if ( e.type === "swipeleft" ) {
+                     $( "#right-panel" ).panel( "open" );
+                  } else if ( e.type === "swiperight" ) {
+                     $( "#left-panel" ).panel( "open" );
+                  }
+               }
+            });
+         });
+      </script>
+   </head>
+
+
+   <body>
+      <div data-role = "page" id = "home">
+         <div data-role = "header" data-theme = "a">
+         <img style="position: absolute;margin-left: 31%;width: 70px; width: 70px; max-height: 70px;" src="./source/937.png" >
+            <h2><a href="#about">Home Page</a></h2>
+
+            <a href = "#left-panel" data-icon = "bars"  data-icon = "bars"  
+               class = "ui-nodisc-icon">swipe</a>
+        
+         </div>
+         
+         <div role = "main" class = "ui-content  ui-responsive-panel">
+          
+         <img src="source\937.png" style="width:100%;" alt="Home Image">
+         </div>
+         
+         <div data-role = "panel" id = "left-panel" data-theme = "a">
+          
+
+       
+             <ul>
+                <li style ="list-style-type: none;"><a href="#home"><img style="width: 159px; max-height: 106px;" src="./source/937.png" ></a> </li>
+                <li  style ="list-style-type: none;" >        </li>
+                <li  style ="list-style-type: none;"><a  href="#about"  class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-info">About Me</a></li>
+                <li  style ="list-style-type: none;"><a href="#Data " class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-bar">Form</a></li>
+                <li  style ="list-style-type: none;"><a href="#formdata" class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-alert">Form Data</a></li>
+                <li  style ="list-style-type: none;"><a href="#api" class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-cloud">API Data</a></li>
+                <li  style ="list-style-type: none;"><a href="#student" class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-info">Student Choice</a></li>
+
+             </ul>
+         </div>
+         
+         <div data-role="footer" data-position="fixed">
+	<h1>All Rights Reserved</h1>
+</div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  About--->
+
+      <div data-role = "page" id = "about">
+        <div data-role = "header" data-theme = "a">
+        <img style="position:absolute;margin-left: 31%;width: 70px; width: 70px; max-height: 70px;" src="./source/937.png" >
+
+           <h2>About</h2>
+           <a href = "#left-panel" data-icon = "bars"  data-icon = "bars"  
+              class = "ui-nodisc-icon">Open left panel</a>
+       
+        </div>
+        
+        <div role = "main" class = "ui-content">
+           <script>
+              
+              
+       
+           </script>
+           <h1 style="display: block; margin-left: 50%;">About Me</h1>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat assumenda, dignissimos, odit, deleniti repudiandae asperiores totam inventore in dicta nam et esse sunt sint temporibus eaque dolores iste recusandae laboriosam?</p>
+        </div>
+        <div role="content">
+        
+      
+<style>
+
+   @media only screen and (min-width: 768px) {
+   
+       .flip-card {
+   
+           padding: 100px;
+       }
+   }
+   
+   
+   .flip-card {
+     background-color: transparent;
+     width: 300px;
+     height: 200px;
+     border: 1px solid #f1f1f1;
+     perspective: 1000px; /* Remove this if you don't want the 3D effect */
+   }
+   
+   /* This container is needed to position the front and back side */
+   .flip-card-inner {
+     position: relative;
+     width: 100%;
+     height: 100%;
+     text-align: center;
+     transition: transform 0.8s;
+     transform-style: preserve-3d;
+   }
+   
+   /* Do an horizontal flip when you move the mouse over the flip box container */
+   .flip-card:hover .flip-card-inner {
+     transform: rotateY(180deg);
+   }
+   
+   /* Position the front and back side */
+   .flip-card-front, .flip-card-back {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     -webkit-backface-visibility: hidden; /* Safari */
+     backface-visibility: hidden;
+   }
+   
+   /* Style the front side (fallback if image is missing) */
+   .flip-card-front {
+     background-color: #bbb;
+     color: black;
+   }
+   
+   /* Style the back side */
+   .flip-card-back {
+     background-color: dodgerblue;
+     color: white;
+     transform: rotateY(180deg);
+   }
+   
+   
+       
+   </style>
+        
+        <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="source/about.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>About</h1>
+      <p>Architect & Engineer</p>
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div>
+        <div data-role = "panel" id = "left-panel" data-theme = "a">
+           <p >This is left panel.</p>
+           
+         
+           <ul>
+            <li style ="list-style-type: none;"><a href="#home"><img style="width: 159px; max-height: 106px;" src="./source/937.png" ></a> </li>
+            <li  style ="list-style-type: none;" >        </li>
+            <li  style ="list-style-type: none;"><a  href="#about"  class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-info">About Me</a></li>
+            <li  style ="list-style-type: none;"><a href="#Data " class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-bar">Form</a></li>
+            <li  style ="list-style-type: none;"><a href="#formdata" class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-alert">Form Data</a></li>
+            <li  style ="list-style-type: none;"><a href="#api" class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-cloud">API Data</a></li>
+            <li  style ="list-style-type: none;"><a href="#student" class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-info">Student Choice</a></li>
+
+         </ul>
+        </div>
+       
+        
+
+        </div>
+        <div data-role="footer" data-position="fixed">
+	<h1>All Rights Reserved</h1>
+</div>
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  form--->
+
+
+
+     <div data-role = "page" id = "Data">
+        <div data-role = "header" data-theme = "a">
+        <img style="position: absolute;margin-left: 31%;width: 70px; width: 70px; max-height: 70px;" src="./source/937.png"  alt="image">
+           <h2>Form Page</h2>
+           <a href = "#left-panel" data-icon = "bars"  data-icon = "bars"  
+              class = "ui-nodisc-icon">Open left panel</a>
+       
+        </div>
+        
+        <div role = "main" class = "ui-content">
+   
+<form method="POST" id="okay">
+<div data-role="fieldcontainer">
+            <label for="fname" data-theme="d">Enter First Name:</label>
+            <br>
+                        <input type="text" id="fname" name="fname" data-theme="d" class="required" placeholder="Enter First Name"/>
+                    </div>
+                    <div data-role="fieldcontainer">
+                        <label for="lname" data-theme="d">             Last Name:</label>
+                        <br>
+                        <input type="text" id="lname" name="lname" data-theme="d" class="required" placeholder="Enter Last Name"/>
+                    </div>
+                    <div data-role="fieldcontainer">
+                        <label for="email" data-theme="d">             E-mail Address:</label>
+                        <br>
+                        <input type="email" id="email" name="email" data-theme="d" class="email required" placeholder="Enter Email"/>
+                    </div>     
+                    <div data-role="fieldcontainer">
+                        <label for="age" data-theme="d">             Age:</label>
+                        <br>
+                        <input type="number" class="required" id="age" name="age" min="12" max="120"  pattern="[0-9]*" data-theme="d" placeholder="Enter age between 8-120"/>
+                    </div>  
+                    <div data-role="fieldcontainer">
+                    <select name="state" id="state" class="required">
+                     <option value="Australian Capital Territory">Australian Capital Territory</option>
+                     <option value="New South Wales">New South Wales</option>
+                     <option value="Northern Territory">Northern Territory</option>
+                     <option value="Queensland">Queensland</option>
+                     <option value="South Australia">South Australia</option>
+                     <option value="Tasmania">Tasmania</option>
+                     <option value="Victoria">Victoria</option>
+                     <option value="Western Australia">Western Australia</option>
+                     </select>
+                      </div>  
+
+          <p id="resultaa"></p>
+
+<button type="submit" id="submit" data-theme="d" value="done" name="done" onclick="save()">Sumbit</button> 
+<button type="reset" id="reset" data-theme="d" value="done" name="done">Reset</button>      
+       </div>
+    
+    
+     <script>
+function save(){
+
+// get data from input box
+
+var new_data=document.getElementById('fname').value;
+var new_data1=document.getElementById('lname').value;
+var new_data2=document.getElementById('email').value;
+var new_data3=document.getElementById('age').value;
+var new_data4=document.getElementById('state').value;
+
+// if there is nothing saved at the start then save an empty array 
+if(localStorage.getItem("data") == null){
+localStorage.setItem('data', '[]');
+}
+
+if(localStorage.getItem("data1") == null){
+localStorage.setItem('data1', '[]');
+}
+
+if(localStorage.getItem("data2") == null){
+localStorage.setItem('data2', '[]');
+}
+
+if(localStorage.getItem("data3") == null){
+localStorage.setItem('data3', '[]');
+}
+
+
+if(localStorage.getItem("data4") == null){
+localStorage.setItem('data4', '[]');
+}
+
+//get old data and slap it to the new data
+
+var old_data = JSON.parse(localStorage.getItem('data'));
+old_data.push(new_data);
+var old_data1 = JSON.parse(localStorage.getItem('data1'));
+old_data1.push(new_data1);
+var old_data2 = JSON.parse(localStorage.getItem('data2'));
+old_data2.push(new_data2);
+var old_data3 = JSON.parse(localStorage.getItem('data3'));
+old_data3.push(new_data3);
+var old_data4 = JSON.parse(localStorage.getItem('data4'));
+old_data4.push(new_data4);
+// svae the old + new dato to local storage
+
+localStorage.setItem('data', JSON.stringify(old_data));
+localStorage.setItem('data1', JSON.stringify(old_data1));
+localStorage.setItem('data2', JSON.stringify(old_data2));
+localStorage.setItem('data3', JSON.stringify(old_data3));
+localStorage.setItem('data4', JSON.stringify(old_data4));
+
+alert("Data is Submitted");
+}
+
+
+
+$("reset").click(function(){
+    $("#Data").find('input:text, input:password, input:file, select, textarea').val('');
+    $("#Data").find('input:radio, input:checkbox').removeAttr('checked').removeAttr('selected');
+});
+function view(){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+     </script>
+  
+   <link rel="stylesheet" href="./validationcdn/site-demos.css">
+   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  
+   <script src="validationcdn/jquery.validate.min.js"></script>
+  
+   <script src="validationcdn/additional-methods.min.js"></script>
+    
+
+   
+   <script>
+
+
+
+      jQuery.validator.setDefaults({
+        debug: true,
+        success: "valid"
+      });
+      $( "#okay" ).validate({
+        rules: {
+         fname: {
+            required: true,
+            minlength: 2
+         },
+         email: {
+           required: true,
+           email: true
+         },
+         age: {
+           required: true,
+           number: true,
+            
+         
+         },
+         state: {
+           required: true,
+          
+            
+         
+         }
+
+        }
+      })
+      </script>
+
+</form>
+       <div data-role = "panel" id = "left-panel" data-theme = "a">
+           <ul>
+            <li style ="list-style-type: none;"><a href="#home"><img style="width: 159px; max-height: 106px;" src="./source/937.png" ></a> </li>
+            <li  style ="list-style-type: none;" >        </li>
+            <li  style ="list-style-type: none;"><a  href="#about"  class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-info">About Me</a></li>
+            <li  style ="list-style-type: none;"><a href="#Data " class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-bar">Form</a></li>
+            <li  style ="list-style-type: none;"><a href="#formdata" class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-alert">Form Data</a></li>
+            <li  style ="list-style-type: none;"><a href="#api" class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-cloud">API Data</a></li>
+            <li  style ="list-style-type: none;"><a href="#student" class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-info">Student Choice</a></li>
+
+         </ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+	<h1>All Rights Reserved</h1>
+</div>
+       
+     </div>
+
+
+
+
+
+
+
+
+     <div data-role = "page" id = "formdata">
+        <div data-role = "header" data-theme = "a">
+        <img style="position: absolute;margin-left: 31%;width: 70px; width: 70px; max-height: 70px;" src="./source/937.png" >
+
+           <h2>Data of Form</h2>
+           <a href = "#left-panel" data-icon = "bars"  data-icon = "bars"  
+              class = "ui-nodisc-icon">Open panel</a>
+       
+        </div>
+        
+        <div role = "main" class = "ui-content">
+        <table id="formtable" data-role="table" style="margin-left=90px" data-mode="reflow" class="ui-responsive" >
+        <tr class="bg-dark text-white text-center">
+<tr>
+
+   <thead>
+      <th>FIrst Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Age</th>
+      <th>State</th>
+   </thead>
+</tr>
+<tbody> <tr><td style="font-weight: bold;"></td><td  style="font-weight: bold;"></td><td style="font-weight: bold;"></td><td style="font-weight: bold;"></td><td style="font-weight: bold;"></td></tr></tbody>
+<style> 
+table, th, td {
+   border: 1px solid black;
+   border-collapse: collapse;
+ }
+ </style>
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+var hst = document.getElementById("formtable");
+
+var data = JSON.parse(localStorage.getItem("data"));
+
+var data1 = JSON.parse(localStorage.getItem("data1"));
+
+var data2 = JSON.parse(localStorage.getItem("data2"));
+
+var data3 = JSON.parse(localStorage.getItem("data3"));
+console.log(data3);
+
+var data4 = JSON.parse(localStorage.getItem("data4"));
+if(localStorage.getItem('data') != null)
+{
+   
+for (var i = 0; i < data1.length; i++) {
+    hst.innerHTML += "<tr><td>" + data[i] + "</td><td>" + data1[i] + "</td> <td>" + data2[i] + "</td><td>" + data3[i] + "</td> <td>" + data4[i] + "</td></tr>";
+}
+
+}
+
+
+</script>
+
+        </table>   
+
+
+        </div>
+        
+        <div data-role = "panel" id = "left-panel" data-theme = "a">      
+           
+           <ul>
+            <li style ="list-style-type: none"><a href="#home"><img style="width: 159px; max-height: 106px;" src="./source/937.png" ></a> </li>
+            <li  style ="list-style-type: none;" >        </li>
+            <li  style ="list-style-type: none;"><a  href="#about"  class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-info">About Me</a></li>
+            <li  style ="list-style-type: none;"><a href="#Data " class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-bar">Form</a></li>
+            <li  style ="list-style-type: none;"><a href="#formdata" class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-alert">Form Data</a></li>
+            <li  style ="list-style-type: none;"><a href="#api" class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-cloud">API Data</a></li>
+            <li  style ="list-style-type: none;"><a href="#student" class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-info">Student Choice</a></li>
+
+         </ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+	<h1>All Rights Reserved</h1>
+</div>
+       
+     </div>
+
+
+
+
+
+
+
+     <div data-role = "page" id = "api">
+        <div data-role = "header" data-theme = "a">
+        <img style="position: absolute;margin-left: 31%;width: 70px; width: 70px; max-height: 70px;" src="./source/937.png" >
+
+           <h2>API data</h2>
+           <a href = "#left-panel" data-icon = "bars"  data-icon = "bars"  
+              class = "ui-nodisc-icon">Open left panel</a>
+       
+        </div>
+        
+        <div role = "main" class = "ui-content">
+           <p>Swipe the panel left or right.</p>
+
+
+
+<div id="output"> 
+    
+    <img style="width:100%px; height: 40%px;" id="img"></img>
+    <p id="copyright"></p>
+    <h1 id="title"></h1><p id="explanation"></p></div>
+
+
+<script>
+$.ajax({
+url:"https://api.nasa.gov/planetary/apod?api_key=58dYq3TdLjF0KDhbv6D97kidGkEBNLxXpOB3eVoC",
+success: function(whatyougot){
+document.getElementById("img").innerHTML="<img scr="+whatyougot.url+ "/>";  
+document.getElementById("copyright").innerHTML="By" +whatyougot.copyright;
+document.getElementById("title").innerHTML=whatyougot.title; 
+document.getElementById("explanation").innerHTML=whatyougot.explanation;
+}
+});
+
+
+</script>
+
+
+
+
+        </div>
+        
+        <div data-role = "panel" id = "left-panel" data-theme = "a">
+           <p>This is left panel.</p>
+          
+          
+           
+           <ul>
+            <li style ="list-style-type: none;"><a href="#home"><img style="width: 159px; max-height: 106px;" src="./source/937.png" ></a> </li>
+            <li  style ="list-style-type: none;" >        </li>
+            <li  style ="list-style-type: none;"><a  href="#about"  class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-info">About Me</a></li>
+            <li  style ="list-style-type: none;"><a href="#Data " class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-bar">Form</a></li>
+            <li  style ="list-style-type: none;"><a href="#formdata" class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-alert">Form Data</a></li>
+            <li  style ="list-style-type: none;"><a href="#api" class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-cloud">API Data</a></li>
+            <li  style ="list-style-type: none;"><a href="#student" class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-info">Student Choice</a></li>
+
+         </ul>
+        </div>
+        
+        <div data-role="footer" data-position="fixed">
+	<h1>All Rights Reserved</h1>
+</div>
+     </div>
+
+
+
+
+
+
+
+
+     
+     <div data-role = "page" id = "student">
+        <div data-role = "header" data-theme = "a">
+        <img style="position:absolute;margin-left: 31%;width: 70px; width: 70px; max-height: 70px;" src="./source/937.png" >
+ 
+        <h2>Student</h2>
+
+           <a href = "#left-panel" data-icon = "bars"  data-icon = "bars"  
+              class = "ui-nodisc-icon">Open left panel</a>
+        </div>
+     
+        <div role = "main" class = "ui-content">
+  
+<div data-role="collapsibleset" data-content-theme="a" data-iconpos="right" id="set">
+    <div data-role="collapsible" id="set1" data-collapsed="true">
+        <h3>Functionality</h3>
+       <input type="text"></input>
+    </div>
+
+<script>
+           $( document ).on( "#student", function() {
+    var nextId = 1;
+    $("#add").click(function() {
+        nextId++;
+        var content = "<div data-role='collapsible' id='set" + nextId + "'><h3>Section " + nextId + "</h3><p>I am the collapsible content in a set so this feels like an accordion. I am hidden by default because I have the 'collapsed' state; you need to expand the header to see me.</p></div>";
+        $( "#set" ).append( content ).collapsibleset( "refresh" );
+    });
+    $( "#expand" ).click(function() {
+        $("#set").children(":last").collapsible( "expand" );
+    });
+    $( "#collapse" ).click(function() {
+        $( "#set" ).children( ":last" ).collapsible( "collapse" );
+    });
+});
+        </script>
+</div>
+        </div>
+        
+        <div data-role = "panel" id = "left-panel" data-theme = "a">
+           <p>This is left panel.</p>
+           <ul>
+            <li style ="list-style-type: none;"><a href="#home"><img style="width: 159px; max-height: 106px;" src="./source/937.png" ></a> </li>
+            <li  style ="list-style-type: none;" >        </li>
+            <li  style ="list-style-type: none;"><a  href="#about"  class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-info">About Me</a></li>
+            <li  style ="list-style-type: none;"><a href="#Data " class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-bar">Form</a></li>
+            <li  style ="list-style-type: none;"><a href="#formdata" class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-alert">Form Data</a></li>
+            <li  style ="list-style-type: none;"><a href="#api" class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-cloud">API Data</a></li>
+            <li  style ="list-style-type: none;"><a href="#student" class = "ui-btn ui-btn-inline ui-btn-icon-left ui-icon-info">Student Choice</a></li>
+
+         </ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+	<h1>All Rights Reserved</h1>
+</div>
+       
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   </body>
+</html>
